@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "85af3ff5-c697-4ef0-89d7-b1fdcb304638",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2ODcyMzE1LCJqdGkiOiI0MzdiN2QzZDdhOWI0MGRiYTliZGUzNGJlYmQ4YjdjNiIsInVzZXJfaWQiOjJ9.O7IPDjDA985usfNfidJfuJ8WUhPl1DIJiA_YN5RMnQY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"mentor@gmail.com\",\n    \"email\":\"mentor@gmail.com\",\n    \"password\":\"Prabhu123\",\n    \"first_name\": \"mentor\",\n    \"last_name\": \"kp\",\n    \"is_mentor\" : \"True\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/question/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"question",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "au",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"mentor@gmail.com\",\n    \"password\":\"Prabhu123\"\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/token/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "raise query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2ODcyMzE1LCJqdGkiOiI0MzdiN2QzZDdhOWI0MGRiYTliZGUzNGJlYmQ4YjdjNiIsInVzZXJfaWQiOjJ9.O7IPDjDA985usfNfidJfuJ8WUhPl1DIJiA_YN5RMnQY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query_message\":\"hi\"\n    \n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/question/query/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"question",
+						"query",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "replay query",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2ODczNTY5LCJqdGkiOiIzZWM0ODEzOTQwY2Q0ODVhOTNlYjhlODY5ZmIyNDU5YiIsInVzZXJfaWQiOjN9.wQZAEDtYMam-iL_PpZmJztPGzOjppiHrKSNzYScGgag",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"mentor_response\": \"Welcom to you\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/question/query/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"question",
+						"query",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qet query",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2ODczNTY5LCJqdGkiOiIzZWM0ODEzOTQwY2Q0ODVhOTNlYjhlODY5ZmIyNDU5YiIsInVzZXJfaWQiOjN9.wQZAEDtYMam-iL_PpZmJztPGzOjppiHrKSNzYScGgag",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"mentor_response\": \"welcome\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/question/query/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"question",
+						"query",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
